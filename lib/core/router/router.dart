@@ -53,6 +53,10 @@ class AppRouter {
         {
           return splashBuilder(LoginPage(), settings);
         }
+      case UnknownAccount.routeName:
+        {
+          return splashBuilder(UnknownAccount(), settings);
+        }
       default:
         return builder(Container(), settings);
     }
