@@ -9,6 +9,16 @@ class Validator {
     return null;
   }
 
+  static String? validatePinCode(String? pinCone) {
+    if (pinCone != null) {
+      if (pinCone.length < 4) {
+        return 'Please enter a valid code';
+      }
+    }
+
+    return null;
+  }
+
   static String? validateEmail(String? email) {
     if (email != null) {
       if (email.isEmpty) {

@@ -57,6 +57,10 @@ class AppRouter {
         {
           return splashBuilder(UnknownAccount(), settings);
         }
+      case ConfirmPhone.routeName:
+        {
+          return splashBuilder(ConfirmPhone(), settings);
+        }
       default:
         return builder(Container(), settings);
     }

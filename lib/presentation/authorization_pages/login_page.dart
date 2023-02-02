@@ -100,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not registered yet?',
+                      'Not registered yet? ',
                     ),
                     AppTextButton(
                       buttonText: 'Sign up',
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                           ? () {
                               Navigator.pushNamed(
                                 context,
-                                UnknownAccount.routeName,
+                                ConfirmPhone.routeName,
                               );
                             }
                           : null,
