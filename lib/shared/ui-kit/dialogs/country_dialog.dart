@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:reewer_app/shared/export.dart';
 
 class SearchDialog extends StatefulWidget {
@@ -78,39 +77,10 @@ class _SearchDialogState extends State<SearchDialog> {
                 ],
               ),
               SizedBox(height: 10),
-              TextField(
-                autofocus: false,
-                cursorWidth: 1,
-                cursorColor: AppColors.greyActive,
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: AppColors.white,
-                  isDense: true,
-                  prefixIcon: SvgPicture.asset(
-                    AppIcons.search,
-                    fit: BoxFit.scaleDown,
-                  ),
-                  hintText: 'Country',
-                  hintStyle: AppTextStyles.grey14Medium400,
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30),
-                    ),
-                    borderSide: const BorderSide(
-                      color: AppColors.greyActive,
-                    ),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(30),
-                    ),
-                    borderSide: const BorderSide(
-                      color: AppColors.greyDefault,
-                    ),
-                  ),
-                ),
-                style: AppTextStyles.black14Medium400,
+              SearchField(
                 controller: textController,
+                hintText: 'Country',
+                suffixIcon: false,
               ),
               SizedBox(height: 5),
               Expanded(

@@ -44,7 +44,9 @@ class TermsPage extends StatelessWidget {
           bottom: 35,
         ),
         child: AppButton(
-          onTap: () {},
+          onTap: () {
+            Navigator.pop(context);
+          },
           buttonText: 'Agree',
         ),
       ),

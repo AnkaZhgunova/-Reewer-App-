@@ -15,4 +15,6 @@ class AppIcons {
   static const String check = 'assets/icons/check.svg';
   static const String cross = 'assets/icons/cross.svg';
   static const String search = 'assets/icons/search.svg';
+  static const String brandLogo = 'assets/icons/brand_logo.svg';
+  static const String filter = 'assets/icons/filter.svg';
 }

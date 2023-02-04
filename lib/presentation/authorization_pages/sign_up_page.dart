@@ -125,7 +125,11 @@ class _SignUpPageState extends State<SignUpPage> {
                 valueListenable: isFormValidate,
                 builder: (BuildContext context, bool value, Widget? child) {
                   return AppButton(
-                    onTap: value && isChecked ? () {} : null,
+                    onTap: value && isChecked
+                        ? () {
+                            Navigator.pushNamed(context, BottomBar.routeName);
+                          }
+                        : null,
                     buttonText: 'Sign up',
                   );
                 },

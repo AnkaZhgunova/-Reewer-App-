@@ -12,3 +12,4 @@ export 'ui-kit/dialogs/country_dialog.dart';
 export 'ui-kit/inputs/app_textfield.dart';
 export 'ui-kit/inputs/code_field.dart';
 export 'ui-kit/inputs/country_field.dart';
+export 'ui-kit/inputs/search_field.dart';

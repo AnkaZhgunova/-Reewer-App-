@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:reewer_app/presentation/export.dart';
 import 'package:reewer_app/shared/export.dart';
 import 'package:reewer_app/utils/validator.dart';
 
@@ -106,7 +107,7 @@ class _ConfirmPhoneNumberState extends State<ConfirmPhoneNumber> {
                 AppButton(
                   onTap: () {
                     if (_formKey.currentState!.validate()) {
-                      Navigator.pop(context);
+                      Navigator.pushNamed(context, BottomBar.routeName);
                     } else {
                       errorController!.add(ErrorAnimationType.shake);
                     }
