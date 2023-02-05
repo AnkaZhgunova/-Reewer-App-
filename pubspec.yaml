@@ -13,6 +13,7 @@ dependencies:
   flutter_svg: ^1.1.6
   google_fonts: ^3.0.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -20,11 +21,33 @@ dev_dependencies:
   dart_code_metrics: ^5.5.1
   google_sign_in: ^5.4.2
   sign_in_with_apple: ^4.3.0
+  pin_code_fields: ^7.4.0
+  flutter_native_splash:
+  flutter_launcher_icons:
+
+flutter_native_splash:
+  background_image: assets/brand/splash_screen.png
+
+  android_12:
+    color: "#1E1929"
+  web: false
+  ios: true
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/brand/logo_foreground.png"
+  adaptive_icon_foreground: "assets/brand/logo_foreground.png"
+  adaptive_icon_background: "assets/brand/logo_foreground.png"
+  min_sdk_android: 21
+
+
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/
     - assets/icons/
+    - assets/country/
 
 

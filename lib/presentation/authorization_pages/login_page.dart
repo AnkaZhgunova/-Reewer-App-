@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
+import 'package:reewer_app/presentation/export.dart';
 import 'package:reewer_app/shared/export.dart';
 import 'package:reewer_app/utils/validator.dart';
 
@@ -45,16 +46,12 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 30,
                 ),
-                SizedBox(
-                  height: 100,
-                  child: AppTextField(
-                    title: 'Phone',
-                    hintText: 'Your phone',
-                    onChanged: (_) {},
-                    inputType: TextInputType.phone,
-                    validator: (number) =>
-                        Validator.validatePhoneNumber(number),
-                  ),
+                AppTextField(
+                  title: 'Phone',
+                  hintText: 'Your phone',
+                  onChanged: (_) {},
+                  inputType: TextInputType.phone,
+                  validator: (number) => Validator.validatePhoneNumber(number),
                 ),
                 SizedBox(
                   height: 30,
@@ -99,11 +96,14 @@ class _LoginPageState extends State<LoginPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Not registered yet?',
+                      'Not registered yet? ',
                     ),
                     AppTextButton(
                       buttonText: 'Sign up',
                       textStyle: AppTextStyles.black14SemiBold600,
+                      onPressed: () {
+                        Navigator.pushNamed(context, SignUpPage.routeName);
+                      },
                     ),
                   ],
                 ),
@@ -115,7 +115,14 @@ class _LoginPageState extends State<LoginPage> {
                   builder: (BuildContext context, bool value, Widget? child) {
                     return AppButton(
                       buttonText: 'Send a code',
-                      onTap: value ? () {} : null,
+                      onTap: value
+                          ? () {
+                              Navigator.pushNamed(
+                                context,
+                                ConfirmPhoneNumber.routeName,
+                              );
+                            }
+                          : null,
                     );
                   },
                 ),

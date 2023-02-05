@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reewer_app/core/router/router.dart';
-import 'package:reewer_app/presentation/authorization_pages/login_page.dart';
+import 'package:reewer_app/presentation/export.dart';
+import 'package:reewer_app/shared/export.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: AppRouter.generateRoute,
+      theme: ThemeData(
+        primaryColor: AppColors.white,
+      ),
       home: LoginPage(),
     );
   }

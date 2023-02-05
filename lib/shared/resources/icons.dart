@@ -11,4 +11,10 @@ class AppIcons {
   static const String profileSelected = 'assets/icons/profile_selected.svg';
   static const String appleLogo = 'assets/icons/apple_logo.svg';
   static const String googleLogo = 'assets/icons/google_logo.svg';
+  static const String arrow = 'assets/icons/arrow.svg';
+  static const String check = 'assets/icons/check.svg';
+  static const String cross = 'assets/icons/cross.svg';
+  static const String search = 'assets/icons/search.svg';
+  static const String brandLogo = 'assets/icons/brand_logo.svg';
+  static const String filter = 'assets/icons/filter.svg';
 }

@@ -51,7 +51,32 @@ class AppRouter {
     switch (settings.name) {
       case LoginPage.routeName:
         {
-          return splashBuilder(LoginPage(), settings);
+          return builder(LoginPage(), settings);
+        }
+      case UnknownAccount.routeName:
+        {
+          return builder(UnknownAccount(), settings);
+        }
+      case ConfirmPhoneNumber.routeName:
+        {
+          return builder(ConfirmPhoneNumber(), settings);
+        }
+      case SignUpPage.routeName:
+        {
+          return builder(SignUpPage(), settings);
+        }
+      case TermsPage.routeName:
+        {
+          return builder(TermsPage(), settings);
+        }
+      case BottomBar.routeName:
+        {
+          return builder(
+            BottomBar(
+              initialIndex: data,
+            ),
+            settings,
+          );
         }
       default:
         return builder(Container(), settings);

@@ -10,7 +10,7 @@ class AppTextField extends StatelessWidget {
   final String? hintText;
   final double radius;
   final bool centerText;
-  final bool? password;
+  final bool password;
   final bool enabled;
   final bool showError;
   final TextInputType? inputType;
@@ -30,7 +30,7 @@ class AppTextField extends StatelessWidget {
     this.errorMaxLines = 2,
     this.showError = true,
     this.maxLength,
-    this.password,
+    this.password = false,
     this.textEditingController,
     this.inputType,
     this.validator,
@@ -43,80 +43,84 @@ class AppTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Text(
-          title ?? '',
-          style: AppTextStyles.black16Medium500.copyWith(color: titleTextColor),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        TextFormField(
-          inputFormatters: filterTextInput,
-          enabled: enabled,
-          validator: validator,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          maxLength: maxLength,
-          textAlign: isTextAlignCenter! ? TextAlign.center : TextAlign.start,
-          controller: textEditingController,
-          obscureText: password ?? false,
-          keyboardType: inputType ?? TextInputType.text,
-          onChanged: onChanged,
-          maxLines: maxLines,
-          style: AppTextStyles.black14Medium400,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(horizontal: 15),
-            counterText: '',
-            hintText: hintText,
-            hintStyle: AppTextStyles.grey14Medium400,
-            errorStyle: showError ? null : TextStyle(height: 0),
-            errorMaxLines: errorMaxLines,
-            fillColor: AppColors.white,
-            filled: true,
-            disabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.greyDefault),
-              borderRadius: BorderRadius.circular(
-                radius,
+    return SizedBox(
+      height: 100,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Text(
+            title ?? '',
+            style:
+                AppTextStyles.black16Medium500.copyWith(color: titleTextColor),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          TextFormField(
+            inputFormatters: filterTextInput,
+            enabled: enabled,
+            validator: validator,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            maxLength: maxLength,
+            textAlign: isTextAlignCenter! ? TextAlign.center : TextAlign.start,
+            controller: textEditingController,
+            obscureText: password,
+            keyboardType: inputType ?? TextInputType.text,
+            onChanged: onChanged,
+            maxLines: maxLines,
+            style: AppTextStyles.black14Medium400,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.symmetric(horizontal: 15),
+              counterText: '',
+              hintText: hintText,
+              hintStyle: AppTextStyles.grey14Medium400,
+              errorStyle: showError ? null : TextStyle(height: 0),
+              errorMaxLines: errorMaxLines,
+              fillColor: AppColors.white,
+              filled: true,
+              disabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.greyDefault),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
-            ),
-            border: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.greyDefault),
-              borderRadius: BorderRadius.circular(
-                radius,
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.greyDefault),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.greyDefault),
-              borderRadius: BorderRadius.circular(
-                radius,
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.greyDefault),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                color: AppColors.greyActive,
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(
+                  color: AppColors.greyActive,
+                ),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
-              borderRadius: BorderRadius.circular(
-                radius,
+              focusedErrorBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.redError),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.redError),
-              borderRadius: BorderRadius.circular(
-                radius,
-              ),
-            ),
-            errorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.redError),
-              borderRadius: BorderRadius.circular(
-                radius,
+              errorBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: AppColors.redError),
+                borderRadius: BorderRadius.circular(
+                  radius,
+                ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
