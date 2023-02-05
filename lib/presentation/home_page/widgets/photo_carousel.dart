@@ -28,7 +28,6 @@ class _PhotoCarouselState extends State<PhotoCarousel> {
         children: [
           Container(
             height: 550,
-            //width: 330,
             color: AppColors.black,
             child: PageView.builder(
               itemCount: mockData.products.length,

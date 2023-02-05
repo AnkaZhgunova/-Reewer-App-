@@ -14,9 +14,11 @@ class TermsPage extends StatelessWidget {
         centerTitle: false,
         backgroundColor: AppColors.white,
         elevation: 1,
-        leading: AppIconButton(onTap: () {
-          Navigator.pop(context);
-        }),
+        leading: AppIconButton(
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text(
           'Terms of use',
           style: AppTextStyles.black22SemiBold600,

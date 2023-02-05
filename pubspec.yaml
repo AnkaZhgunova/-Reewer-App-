@@ -12,17 +12,18 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.6
   google_fonts: ^3.0.1
-  google_sign_in: ^5.4.2
-  sign_in_with_apple: ^4.3.0
-  pin_code_fields: ^7.4.0
-  flutter_native_splash:
-  flutter_launcher_icons:
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
   dart_code_metrics: ^5.5.1
+  google_sign_in: ^5.4.2
+  sign_in_with_apple: ^4.3.0
+  pin_code_fields: ^7.4.0
+  flutter_native_splash:
+  flutter_launcher_icons:
 
 flutter_native_splash:
   background_image: assets/brand/splash_screen.png

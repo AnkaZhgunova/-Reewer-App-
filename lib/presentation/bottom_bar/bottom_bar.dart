@@ -40,7 +40,7 @@ class _BottomBarState extends State<BottomBar> {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        body: _bodyView.elementAt(_selectedIndex),
+        body: _bodyView[_selectedIndex],
         backgroundColor: AppColors.whiteBG,
         bottomNavigationBar: Container(
           height: 100,

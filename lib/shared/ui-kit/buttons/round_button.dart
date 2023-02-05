@@ -6,7 +6,7 @@ class RoundButton extends StatelessWidget {
   final String buttonText;
   final VoidCallback? onPressed;
   final String? icon;
-  final EdgeInsets padding;
+  final EdgeInsets? padding;
   const RoundButton({
     required this.buttonText,
     this.icon,

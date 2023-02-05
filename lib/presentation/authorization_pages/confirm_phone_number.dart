@@ -16,13 +16,8 @@ class ConfirmPhoneNumber extends StatefulWidget {
 
 class _ConfirmPhoneNumberState extends State<ConfirmPhoneNumber> {
   final _formKey = GlobalKey<FormState>();
-  StreamController<ErrorAnimationType>? errorController;
-
-  @override
-  void initState() {
-    errorController = StreamController<ErrorAnimationType>();
-    super.initState();
-  }
+  StreamController<ErrorAnimationType>? errorController =
+      StreamController<ErrorAnimationType>();
 
   @override
   void dispose() {

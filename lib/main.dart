@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: AppColors.white,
       ),
-      home: BottomBar(),
+      home: LoginPage(),
     );
   }
 }

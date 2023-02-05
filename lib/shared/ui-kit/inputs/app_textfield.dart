@@ -10,7 +10,7 @@ class AppTextField extends StatelessWidget {
   final String? hintText;
   final double radius;
   final bool centerText;
-  final bool? password;
+  final bool password;
   final bool enabled;
   final bool showError;
   final TextInputType? inputType;
@@ -30,7 +30,7 @@ class AppTextField extends StatelessWidget {
     this.errorMaxLines = 2,
     this.showError = true,
     this.maxLength,
-    this.password,
+    this.password = false,
     this.textEditingController,
     this.inputType,
     this.validator,
@@ -65,7 +65,7 @@ class AppTextField extends StatelessWidget {
             maxLength: maxLength,
             textAlign: isTextAlignCenter! ? TextAlign.center : TextAlign.start,
             controller: textEditingController,
-            obscureText: password ?? false,
+            obscureText: password,
             keyboardType: inputType ?? TextInputType.text,
             onChanged: onChanged,
             maxLines: maxLines,

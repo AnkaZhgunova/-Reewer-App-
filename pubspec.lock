@@ -191,7 +191,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_launcher_icons:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: flutter_launcher_icons
       sha256: ce0e501cfc258907842238e4ca605e74b7fd1cdf04b3b43e86c43f3e40a1592c
@@ -207,7 +207,7 @@ packages:
     source: hosted
     version: "2.0.1"
   flutter_native_splash:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: flutter_native_splash
       sha256: "6777a3abb974021a39b5fdd2d46a03ca390e03903b6351f21d10e7ecc969f12d"
@@ -249,7 +249,7 @@ packages:
     source: hosted
     version: "3.0.1"
   google_sign_in:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: google_sign_in
       sha256: "821f354c053d51a2d417b02d42532a19a6ea8057d2f9ebb8863c07d81c98aaf9"
@@ -457,7 +457,7 @@ packages:
     source: hosted
     version: "5.1.0"
   pin_code_fields:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: pin_code_fields
       sha256: c8652519d14688f3fe2a8288d86910a46aa0b9046d728f292d3bf6067c31b4c7
@@ -521,7 +521,7 @@ packages:
     source: hosted
     version: "3.2.1"
   sign_in_with_apple:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: sign_in_with_apple
       sha256: ac3b113767dfdd765078c507dad9d4d9fe96b669cc7bd88fc36fc15376fb3400
